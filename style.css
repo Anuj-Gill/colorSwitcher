@@ -1,0 +1,24 @@
+html{
+  text-align: center;
+}
+
+.colorBox{
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  cursor: pointer;
+  
+}
+
+#redColor{
+  background-color: red;
+}
+#greenColor{
+  background-color: green;
+}
+#yellowColor{
+  background-color: yellow;
+}
+#lightBlueColor{
+  background-color: lightblue;
+}
