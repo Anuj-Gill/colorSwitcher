@@ -1,40 +1,39 @@
-const colors = {
-  red: 'red',
-  green: 'green',
-  yellow: 'yellow',
-  lightBlue: 'lightBlue'
-}
 
-const html = document.querySelector('html');
+const buttons = document.querySelectorAll('.colorBox');
+const body = document.querySelector('body');
 
 
 let flag = 0;
 
-function colorChange(color) {
-  
-  if(flag === 0){
-    html.style.backgroundColor = colors[color];
-    flag = 1;
-  } else {
-    html.style.backgroundColor = 'white';
-    flag = 0;
-  }
-  console.log(flag);
-}
+
+buttons.forEach((button) => {
+
+  button.addEventListener('click', (e) => {
+    // console.log(e.target.id);
+    if(e.target.id === 'red' && flag === 0){
+      body.style.backgroundColor = e.target.id;
+      flag = 1;
+    }
+    else if(e.target.id === 'yellow' && flag === 0){
+      body.style.backgroundColor = e.target.id;
+      flag = 1;
+    }
+    else if(e.target.id === 'green' && flag === 0){
+      body.style.backgroundColor = e.target.id;
+      flag = 1;
+    }
+    else if(e.target.id === 'lightblue' && flag === 0){
+      body.style.backgroundColor = e.target.id;
+      flag = 1;
+    } else {
+      body.style.backgroundColor = 'white';
+      flag = 0;
+    }
+
+  })
+})
 
 
-document.getElementById('redColor').addEventListener('click',() => {
-  colorChange('red');
-});
-document.getElementById('greenColor').addEventListener('click',() => {
-  colorChange('green');
-});
-document.getElementById('yellowColor').addEventListener('click',() => {
-  colorChange('yellow');
-});
-document.getElementById('lightBlueColor').addEventListener('click',() => {
-  colorChange('lightBlue');
-});
 
 
 
